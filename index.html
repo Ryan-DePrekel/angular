@@ -19,6 +19,7 @@
 
             <input type="text"  ng-model="name"/>
             <input type="text"  ng-model="color"/>
+            <p> {{date}}</p>
             <ol>
                 <li class="name-{{n.color}}" ng-repeat="n in names">{{greeting + n.name}}</li>
             </ol>
@@ -29,6 +30,11 @@
             <ul>
                 <li ng-repeat="nick in in_office">{{nick}}</li>
             </ul>
+            
+            <button ng-click="displayTemplate(0)">Display 1</button>
+            <button ng-click="displayTemplate(1)">Display 2</button>
+            
+            <div ng-include="template.url"></div>
         </div>
     </body>
 </html>
